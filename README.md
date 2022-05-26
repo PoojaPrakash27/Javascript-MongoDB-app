@@ -1,9 +1,17 @@
+# docker-compose-tutorial-nana
 
+My code and notes from the tutorial:
+
+https://github.com/johnfkraus/docker-compose-tutorial-nana
+
+The tutorial on YouTube:
 
 https://www.youtube.com/watch?v=6YisG2GcXaw&list=PLy7NrYWoggjwPggqtFsI_zMAwvG0SqYCb&index=8
 
+Nana's repo:
 
 https://gitlab.com/nanuchi/techworld-js-docker-demo-app
+
 
 docker run postgres:9.6
 
@@ -183,8 +191,19 @@ https://www.youtube.com/watch?v=vWSRWpOPHws&list=PLy7NrYWoggjwPggqtFsI_zMAwvG0Sq
 - docker login
 - docker push
 
+Create an AWS ECR named my-app.
 
+Copy push commands from AWS GUI.
 
+Tag your my-app image as per the AWS push commands.
+
+Login to AWS ECR from the command line.
+
+Image URI:
+
+129102834865.dkr.ecr.us-east-1.amazonaws.com/my-app:1.0
+
+Push your image to AWS ECR.
 
 
 
