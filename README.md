@@ -139,10 +139,36 @@ RUN mkdir -p /home/app
 
 COPY . /home/app
 
-CMD ["node", "server.js"]
+CMD ["node", "/home/app/server.js"]
 ```
 
 docker build -t my-app:1.0 .
+
+docker run my-app:1.0
+
+Re-build the container after changing the Dockerfile.  But first delete the old image, which might require deleting the  (possibly stopped) container first.
+
+Get the container ID:
+
+docker ps -a | grep my-app
+
+Delete the container:
+
+docker rm [CONTAINER_ID]
+
+Delete the image:
+
+docker rmi [IMAGE_ID]
+
+Re-build the image:
+
+docker build -t my-app:1.0 .
+
+Run the image/container:
+
+docker run my-app:1.0
+
+
 
 
 
