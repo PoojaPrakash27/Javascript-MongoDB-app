@@ -168,6 +168,12 @@ Run the image/container:
 
 docker run my-app:1.0
 
+docker exec -it [CONTAINER_ID] /bin/sh
+
+Check for environment variables:
+
+env
+
 
 
 
