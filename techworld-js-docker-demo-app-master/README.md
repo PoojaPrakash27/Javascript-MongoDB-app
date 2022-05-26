@@ -7,6 +7,8 @@ This demo app shows a simple user profile app set up using
 
 All components are docker-based
 
+See demo video playlist: https://www.youtube.com/watch?v=WmcdMiyqfZs&list=PLy7NrYWoggjwPggqtFsI_zMAwvG0SqYCb&index=10
+
 ### With Docker
 
 #### To start the application
