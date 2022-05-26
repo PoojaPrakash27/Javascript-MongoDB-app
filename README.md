@@ -101,3 +101,48 @@ save as mongo.yaml
 
 docker compose -f mongo.yaml up
 
+## Lesson 10
+https://www.youtube.com/watch?v=WmcdMiyqfZs&list=PLy7NrYWoggjwPggqtFsI_zMAwvG0SqYCb&index=10
+
+
+### Image Environment Blueprint
+
+install node
+
+set MONGO_DB_USERNAME=admin
+
+set MONGO_DB_PASSWORD=password
+
+create /home/app folder
+
+copy current files to /home/app folder
+
+CMD: executes an entry point linux command
+
+### Dockerfile
+
+We will define env variables in the dockerfile, but it is probably better to define them in the docker-compose.yml file so you could change them later.
+
+COPY command executes on the host!  RUN executes in the container.
+
+CMD: execute an entry point Linux command.  You can have multiple RUN commands but only one CMD command.
+
+The file must ALWAYS be named Dockerfile.
+
+```Dockerfile
+FROM node:13-alpine
+
+ENV MONGO_DB_USERNAME=admin \
+    MONGO_DB_PASSWORD=password
+
+RUN mkdir -p /home/app
+
+COPY . /home/app
+
+CMD ["node", "server.js"]
+```
+
+docker build -t my-app:1.0 .
+
+
+
