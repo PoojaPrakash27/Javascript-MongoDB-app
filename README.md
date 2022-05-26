@@ -174,6 +174,16 @@ Check for environment variables:
 
 env
 
+## Lesson 11
+https://www.youtube.com/watch?v=vWSRWpOPHws&list=PLy7NrYWoggjwPggqtFsI_zMAwvG0SqYCb&index=11
+
+- Docker private repository
+- registry options
+- build and tag an image
+- docker login
+- docker push
+
+
 
 
 
