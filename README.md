@@ -206,4 +206,25 @@ Image URI:
 Push your image to AWS ECR.
 
 
+## Make some changes to the app and push a new image to the AWS repo
+
+In the Dockerfile change the name of the directory inside the container from /home/app to /home/node-app.  (Leave the local directory name as app.)
+
+Make some change to server.js; add or remove log messages.
+
+aws ecr get-login-password --region us-east-1 --profile jk-console | docker login --username AWS --password-stdin 129102834865.dkr.ecr.us-east-1.amazonaws.com
+
+docker build -t my-app:1.1 .
+
+docker tag my-app:1.1 129102834865.dkr.ecr.us-east-1.amazonaws.com/my-app:1.1
+
+docker push 129102834865.dkr.ecr.us-east-1.amazonaws.com/my-app:1.1
+
+URI:
+129102834865.dkr.ecr.us-east-1.amazonaws.com/my-app:1.1
+
+## Lesson 12 - Deploy your containerized application
+
+Add my-app to services in docker-compose.yaml.
+
 

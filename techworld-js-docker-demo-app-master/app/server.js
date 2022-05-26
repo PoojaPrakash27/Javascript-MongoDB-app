@@ -32,6 +32,8 @@ let mongoClientOptions = { useNewUrlParser: true, useUnifiedTopology: true };
 // "user-account" in demo with docker. "my-db" in demo with docker-compose
 let databaseName = "my-db";
 
+console.log('connecting to the db.  databaseName = ' + databaseName);
+
 app.post('/update-profile', function (req, res) {
   let userObj = req.body;
 
@@ -46,6 +48,7 @@ app.post('/update-profile', function (req, res) {
 
     db.collection("users").updateOne(myquery, newvalues, {upsert: true}, function(err, res) {
       if (err) throw err;
+      console.log('one document updated ' + newvalues);
       client.close();
     });
 
@@ -76,5 +79,5 @@ app.get('/get-profile', function (req, res) {
 });
 
 app.listen(3000, function () {
-  console.log("app listening on port 3000!");
+  console.log("app is listening on port 3000!");
 });
