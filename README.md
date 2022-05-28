@@ -205,7 +205,6 @@ Image URI:
 
 Push your image to AWS ECR.
 
-
 ## Make some changes to the app and push a new image to the AWS repo
 
 In the Dockerfile change the name of the directory inside the container from /home/app to /home/node-app.  (Leave the local directory name as app.)
@@ -226,5 +225,4 @@ URI:
 ## Lesson 12 - Deploy your containerized application
 
 Add my-app to services in docker-compose.yaml.
-
 
